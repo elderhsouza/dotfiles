@@ -1,4 +1,26 @@
+# speeds up git repostiories
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# history
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
+# enable zsh-options
+setopt autocd extendedglob nomatch
+
+# disable zsh-options
+unsetopt beep notify
+
+# keyword bindings emacs style
+bindkey -e
+
+# enable 'modern auto completion'
+zstyle :compinstall filename '/home/dev/.zshrc'
+autoload -Uz compinit
+compinit
+
+# zgenom
 source "${HOME}/.zgenom/zgenom.zsh"
 
 zgenom autoupdate
@@ -23,9 +45,7 @@ fi
 
 # eval "$(starship init zsh)"
 
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# ASDF
+# asdf
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
