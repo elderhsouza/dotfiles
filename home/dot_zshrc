@@ -39,17 +39,17 @@ if ! zgenom saved; then
   # zgenom compile $ZDOTDIR
 fi
 
-# eval "$(starship init zsh)"
-
 # asdf
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
 
 # enable 'modern auto completion'
-zstyle :compinstall filename '/home/dev/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
+
+eval "$(starship init zsh)"
 
 # plugins=(wd git docker npm zsh-nvm zsh-autosuggestions zsh-syntax-highlighting)
 
