@@ -12,7 +12,7 @@ LC_ADDRESS="en_US.UTF-8"
 LC_TELEPHONE="en_US.UTF-8"
 LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
-LC_ALL=
+LC_ALL=C.UTF-8
 
 # compilation flags
 export ARCHFLAGS="-arch x86_64"
